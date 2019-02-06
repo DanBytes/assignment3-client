@@ -60,10 +60,10 @@ class EditProgram extends Component {
     render() {
         return (
             <div>
-             {/* Instructive form heading */}
-             <h1>Edit Program</h1>
+                {/* Instructive form heading */}
+                <h1>Edit Program</h1>
                 <form onSubmit={this.handleSubmit}>
-                    
+
                     {/* Update your program title */}
                     <TextField
                         required
@@ -83,7 +83,7 @@ class EditProgram extends Component {
                         }} // When you begin typing, this makes sure the Labels don't cover up the other fields' input boxes and overlap with the prefilled text. 
                     />
                     <br />
-                    
+
                     {/* Update your description of the program */}
                     <TextField
                         required
@@ -103,13 +103,13 @@ class EditProgram extends Component {
                         }}
                     />
                     <br />
-                    
+
                     {/* Update the date when your program will be run */}
                     <TextField
                         required
                         id="date"
                         label="Date"
-                        style={{ margin: 15}}
+                        style={{ margin: 15 }}
                         helperText="When will you run your program?"
                         margin="normal"
                         variant="outlined"
@@ -125,15 +125,15 @@ class EditProgram extends Component {
                     {/* Update how many minutes your program will be run for */}
                     <TextField
                         required
-                        id="length"
+                        id="len"
                         label="Length"
-                        style={{ margin: 15}}
+                        style={{ margin: 15 }}
                         placeholder="Enter number between 1 - 120"
                         helperText="How many minutes will your program run for?"
                         margin="normal"
                         type="length"
                         value={this.state.program.length}
-                        onChange={this._change('length')}
+                        onChange={this._change('len')}
                         variant="outlined"
                         InputLabelProps={{
                             shrink: true,
@@ -143,10 +143,10 @@ class EditProgram extends Component {
 
                     {/* Update attached files - add new file or remove existing file */}
                     {/* <p>Attachments</p> */}
-                    
+
                     {/* Click 'save changes' to update your program with the new details */}
                     <Button type="submit" variant='contained' color="primary" style={{ 'backgroundColor': 'orange', margin: 15 }}>Save Changes</Button>
-                
+
                 </form>
             </div>
 
